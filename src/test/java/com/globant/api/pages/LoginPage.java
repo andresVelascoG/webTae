@@ -10,16 +10,16 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
 
-    public LoginPage(WebDriver diver) {
-        super(diver);
+    public LoginPage(WebDriver driver) {
+        super(driver);
     }
-    @FindBy(id = "login")
+    @FindBy(id = "user-name")
     private WebElement usernameField;
 
     @FindBy(id = "password")
     private WebElement passwordField;
 
-    @FindBy(id = "loginButton")
+    @FindBy(id = "login-button")
     private WebElement loginButton;
 
     public WebElement getUsernameField() {
@@ -32,5 +32,12 @@ public class LoginPage extends BasePage {
 
     public WebElement getLoginButton() {
         return loginButton;
+    }
+
+    public HomePage performLogin(String username, String password){
+        this.usernameField.sendKeys(username);
+        this.passwordField.sendKeys(password);
+        this.loginButton.click();
+        return new HomePage(super.getDriver());
     }
 }

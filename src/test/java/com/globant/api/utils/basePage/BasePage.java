@@ -26,6 +26,7 @@ public class BasePage {
         this.wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    /*
     public void login(String username, String password) {
         LoginPage loginPage = new LoginPage(driver);
         waitElementVisibility(loginPage.getUsernameField());
@@ -35,4 +36,5 @@ public class BasePage {
         waitElementVisibility(loginPage.getLoginButton());
         loginPage.getLoginButton().click();
     }
+     */
 }

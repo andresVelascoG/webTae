@@ -9,6 +9,12 @@ public class CheckoutCompletePage extends BasePage{
     public CheckoutCompletePage(WebDriver diver) {
         super(diver);
     }
-    @FindBy(className = "title")
+
+    @FindBy(className = "complete-header")
     private WebElement MainTitle;
+
+    public WebElement getMainTitle(){
+        return this.MainTitle;
+    }
+
 }

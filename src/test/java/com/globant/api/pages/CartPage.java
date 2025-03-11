@@ -12,4 +12,9 @@ public class CartPage extends BasePage {
 
     @FindBy(id = "checkout")
     private WebElement checkoutButton;
+
+    public CheckoutInformationPage pressCheckoutButton(){
+        this.checkoutButton.click();
+        return new CheckoutInformationPage(super.getDriver());
+    }
 }

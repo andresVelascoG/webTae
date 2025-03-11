@@ -12,4 +12,13 @@ public class CheckoutOverviewPage extends BasePage {
 
     @FindBy(id = "finish")
     private WebElement finishButton;
+
+    public WebElement getFinishButton(){
+        return this.finishButton;
+    }
+
+    public CheckoutCompletePage pressFinishButton(){
+        finishButton.click();
+        return new CheckoutCompletePage(super.getDriver());
+    }
 }

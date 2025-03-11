@@ -15,8 +15,6 @@ public class MainDriver {
     public MainDriver() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.navigate().to("https://www.google.com/");
-        driver.manage().window().maximize();
     }
 
 }
