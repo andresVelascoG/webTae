@@ -26,6 +26,10 @@ public class BasePage {
         this.wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    public boolean isElementDisplayed(WebElement element){
+        return element.isDisplayed();
+    }
+
     /*
     public void login(String username, String password) {
         LoginPage loginPage = new LoginPage(driver);

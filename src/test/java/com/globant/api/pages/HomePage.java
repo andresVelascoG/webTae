@@ -23,6 +23,18 @@ public class HomePage extends BasePage {
     @FindBy(className = "shopping_cart_link")
     private  WebElement cartButton;
 
+    @FindBy(id = "react-burger-menu-btn")
+    private WebElement burgerMenu;
+
+    public WebElement getBurgerMenu(){
+        return this.burgerMenu;
+    }
+
+    public MenuBar pressBurgerMenu(){
+        burgerMenu.click();
+        return new MenuBar(super.getDriver());
+    }
+
     public WebElement getCartButton(){
         return cartButton;
     }
@@ -38,6 +50,12 @@ public class HomePage extends BasePage {
 
     public List<WebElement> getProductsList(){
         return productsListDiv.findElements(By.className("inventory_item"));
+    }
+
+    public void slectEspecificElement(List<WebElement> elements, int position){
+        WebElement selectedElement = elements.get(position);
+        WebElement button = selectedElement.findElement(By.className("btn_inventory"));
+        button.click();
     }
 
     public void selectRandomElementsAndClickButton(List<WebElement> divs) {

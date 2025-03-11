@@ -31,6 +31,7 @@ public class BuyProductPath extends BaseHomeTest {
         checkoutOverviewPage.waitElementVisibility(checkoutOverviewPage.getFinishButton());
         CheckoutCompletePage checkoutCompletePage = checkoutOverviewPage.pressFinishButton();
         checkoutCompletePage.waitElementVisibility(checkoutCompletePage.getMainTitle());
+
         assertEquals(checkoutCompletePage.getMainTitle().getText().toLowerCase(), "thank you for your order!", "The title doesn't match");
 
     }
