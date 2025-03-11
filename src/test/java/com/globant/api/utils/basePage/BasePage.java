@@ -29,16 +29,4 @@ public class BasePage {
     public boolean isElementDisplayed(WebElement element){
         return element.isDisplayed();
     }
-
-    /*
-    public void login(String username, String password) {
-        LoginPage loginPage = new LoginPage(driver);
-        waitElementVisibility(loginPage.getUsernameField());
-        loginPage.getUsernameField().sendKeys(username);
-        waitElementVisibility(loginPage.getPasswordField());
-        loginPage.getPasswordField().sendKeys(password);
-        waitElementVisibility(loginPage.getLoginButton());
-        loginPage.getLoginButton().click();
-    }
-     */
 }

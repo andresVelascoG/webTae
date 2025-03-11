@@ -1,0 +1,11 @@
+<suite name="Web Automation Suite">
+    <parameter name="url" value="https://www.wikipedia.org/wiki/Wikipedia:Portada" />
+    <test name="Secresauce Tests">
+        <classes>
+            <class name="com.globant.api.tests.BuyProductPath" />
+            <class name="com.globant.api.tests.DeleteProductsFromCart" />
+            <class name="com.globant.api.tests.Logout" />
+
+        </classes>
+    </test>
+</suite>
